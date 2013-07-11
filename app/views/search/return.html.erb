@@ -1,5 +1,8 @@
 <ul>
-<% @songs.each do |song| %>
-<li><%= song['title']  %></li>
-<% end %>
+  <section>
+    <% @songs.each do |song| %>
+    <h2><li>"<%= song['title'] %>" by <%= song['artist_name'] %></li></h2>
+    <% end %>
+    <a href="/search" class="button success radius">Search Again!</a>
+  </section>
 </ul>

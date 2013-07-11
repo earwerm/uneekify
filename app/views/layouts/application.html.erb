@@ -8,101 +8,61 @@
 <title>Uneekify</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "vendor/custom.modernizr" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   </head>
+
   <!-- Header and Nav -->
-
-
-
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="/"> uneekify </a></h1>
+    </li>
+  </ul>
+</nav>
   <!-- End Header and Nav -->
-
 <div class="row">
     <div class="twelve columns">
-      <span><h1>Uneekify: Music for all occasions...</h1></span>
-     <hr/>
+      <hr/>
+
+<%= yield %>
+
+
+  <hr/>
+    <div class="orbit-container">
+     <ul data-orbit="" class="orbit-slides-container">
       <div id="slider">
-        <img src="http://www.journeycounselling.ca/cms/wp-content/uploads/2012/11/Pre-marrigae-1000x400px.jpg" />
+        <img src="http://www.journeycounselling.ca/cms/wp-content/uploads/2012/11/Pre-marrigae-1000x400px.jpg" /><div class="orbit-caption">...</div>
         <img src="http://www.journeycounselling.ca/cms/wp-content/uploads/2012/10/Couple-family-1000x400px.jpg" />
         <img src="http://www.journeycounselling.ca/cms/wp-content/uploads/2012/10/Couple-intimacy-1000x400px.jpg" />
         <img src="http://www.journeycounselling.ca/cms/wp-content/uploads/2012/10/Individuals-couple2-1000x400px.jpg" />
+     </div>
+   </ul>
   </div>
 <hr/>
   <body>
-  <% if flash[:notice].present? %>
-    <div class="row">
-    <div class="columns small-5 alert-box alert">
-      <%= flash[:notice] %>
-    </div>
-    <div class="columns small-7"></div>
-  </div>
-<% end %>
-    <%= javascript_include_tag "application" %>
 
-    <%= yield %>
 
-  <nav>
-     <ul>
-        <%== intellinav  %>
-     </ul>
-   </nav>
   </body>
 </html>
 
-  <!-- Three-up Content Blocks -->
 
-  <div class="row">
-    <div class="four columns">
-      <img src="http://i329.photobucket.com/albums/l389/paperdiaries/IMG_0011-400x300.jpg" />
-      <h4>Flora or fauna?</h4>
-      <p>Nature provides so much inspiration, maybe you will find your name in the intricate patterns of a flower or budding bush.</p>
-    </div>
-
-    <div class="four columns">
-      <img src="http://dribbble.s3.amazonaws.com/users/276780/screenshots/943603/shot_400x300px__nutella.jpg" />
-      <h4>Public Domain?</h4>
-      <p>Commercial products and corporate logos communicate the globalisation of community and culture.</p>
-    </div>
-
-    <div class="four columns">
-      <img src="http://images3.wikia.nocookie.net/__cb20111130005106/twilightsaga/images/8/8f/Water-hotties-robert-pattinson_400x300.jpg" />
-      <h4>Celebrity?</h4>
-      <p>We admire many public figures, so much so that they can feel closer to us than our friends. </p>
-    </div>
-    <hr/>
-  </div>
-
-
-  <!-- Call to Action Panel -->
-  <div class="row">
-    <div class="twelve columns">
-
-
-        <div class="row">
-          <div class="nine columns">
-            <p>Feel free to send us any questions or suggestions.</p>
-          </div>
-          <div class="three columns">
-            <a href="" class="radius button right">Contact</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
 
   <!-- Footer -->
 
-<hr />
+
 
       <div class="row - leftt">
         <div class="eight columns">
-          <p>Powered by:</p><img src="http://tightmixblog.com/wp-content/uploads/2010/12/logo-echonest.jpg" />
+          <img src="http://tightmixblog.com/wp-content/uploads/2010/12/logo-echonest.jpg" />
+          <p>Powered by:</p>
        </div>
       </div>
 
       <div class="row - right">
-        <div class="tweleve columns">
+        <div class="twelve columns">
           <p>&copy; Copyright Crowd Burst Pty Ltd 2013</p>
         </div>
       </div>
@@ -157,12 +117,14 @@
   <!-- Initialize JS Plugins -->
   <script src="javascripts/app.js"></script>
 
-  <script type="text/javascript">
+<script type="text/javascript">
 
      $(window).load(function() {
          $('#slider').orbit();
      });
-  </script>
+     </script>
+
+
 
 </body>
 </html>
