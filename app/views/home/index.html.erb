@@ -1,17 +1,10 @@
-<span><h1>Welcome to uneekify!</h1>
-  <h2>Unique song recommendations for all occasions...</h2></span>
+<div>
+<span><h1>welcome to uneekify</h1>
+  <h2>unique & tailored song recommendations</h2></span>
 
-<% if flash[:notice].present? %>
-    <div class="row">
-    <div class="columns small-5 alert-box alert">
-      <%= flash[:notice] %>
-    </div>
-    <div class="columns small-7"></div>
-  </div>
-<% end %>
 
-  <nav>
-     <ul>
-        <%== intellinav  %>
-     </ul>
-   </nav>
+  <a href="/users/new" button class="btn btn-large btn-primary" type="button">register</button></a>
+  <a href="/login" button class="btn btn-large" type="button">sign In</button></a>
+</div>
+
+

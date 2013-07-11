@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to(root_path)
+      redirect_to(search_path)
     else
       render :new
     end
@@ -23,15 +23,6 @@ class UsersController < ApplicationController
     @user = @auth
     render :new
   end
-
-  def update
-    @user = @auth
-   if @user.update_attributes(params[:user])
-    redirect_to(root_path)
-   else
-    render :new
-   end
- end
 
   def destroy
     user = User.find(params[:id])

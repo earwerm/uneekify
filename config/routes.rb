@@ -10,7 +10,7 @@ Uneekify::Application.routes.draw do
 #login views
 
   get '/login' => 'session#new'
-  post '/login' => 'session#create'
+  post '/login' => 'search#lookup'
   delete '/login' => 'session#destroy'
 
 #search views

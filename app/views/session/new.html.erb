@@ -1,0 +1,16 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<% if flash[:notice].present? %>
+    <div class="row">
+    <div class="columns small-5 alert-box alert">
+      <%= flash[:notice] %>
+    <div class="columns small-7"></div>
+<% end %>
