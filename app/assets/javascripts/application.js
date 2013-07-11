@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require 'modernizr.foundation.js'
+//= require 'foundation.min.js'
+//= require 'app.js'
