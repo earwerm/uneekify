@@ -10,7 +10,8 @@ gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'pg'
 gem 'haml'
-
+gem 'httparty'
+gem 'json'
 
 gem 'ruby-echonest'
 

@@ -9,7 +9,6 @@ module ApplicationHelper
       links << "<li>#{link_to('Edit', edit_users_path)}</li>" +
       links << "<li>"
       links << "#{link_to('Logout ' + @auth.name, login_path, :method => :delete, :confirm => "Are you sure?")}"
-      links << " #{number_to_currency @auth.balance}"
       links << "</li>"
     else
       links << "<li>#{link_to('Create New', new_user_path)}</li>" +

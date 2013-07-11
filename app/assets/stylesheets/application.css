@@ -10,6 +10,6 @@
  *
  *= require_self
  *= require_tree .
- *= require 'foundation.min.css'
- *= require 'app.css'
+ *= require foundation.min.css
+ *= require app.css
  */

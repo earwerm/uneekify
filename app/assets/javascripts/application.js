@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require 'modernizr.foundation.js'
-//= require 'foundation.min.js'
-//= require 'app.js'
+//= require modernizr.foundation.js
+//= require foundation.min.js
+//= require app.js

@@ -7,18 +7,19 @@
 
 <title>Uneekify</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "vendor/custom.modernizr" %>
   <%= csrf_meta_tags %>
   </head>
   <!-- Header and Nav -->
 
 
-<hr/>
+
   <!-- End Header and Nav -->
 
 <div class="row">
     <div class="twelve columns">
       <span><h1>Uneekify: Music for all occasions...</h1></span>
+     <hr/>
       <div id="slider">
         <img src="http://www.journeycounselling.ca/cms/wp-content/uploads/2012/11/Pre-marrigae-1000x400px.jpg" />
         <img src="http://www.journeycounselling.ca/cms/wp-content/uploads/2012/10/Couple-family-1000x400px.jpg" />
@@ -157,6 +158,7 @@
   <script src="javascripts/app.js"></script>
 
   <script type="text/javascript">
+
      $(window).load(function() {
          $('#slider').orbit();
      });

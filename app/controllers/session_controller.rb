@@ -19,8 +19,8 @@ class SessionController < ApplicationController
   end
 
   def search
-  end
-
-  def return
+    binding.pry
+    url = "http://developer.echonest.com/api/v4/song/search?api_key=9JJUAQS0ZBF2SK5VU&style=#{@genre}&min_danceability=#{@tempo}&min_tempo=#{@min_bpm}&results=#{@results_number}"
+    #redirect_to(root_path)
   end
 end

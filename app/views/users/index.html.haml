@@ -8,4 +8,5 @@
           %span.label.success.radius= user.name
       %td= user.age
       %td= user.name
+      %td= user.password
       %td= link_to('Delete', user, :method => :delete, :confirm => 'Are you sure?', :class => 'button radius alert tiny') if user != @auth
